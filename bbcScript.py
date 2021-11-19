@@ -41,10 +41,10 @@ for url in urlDoc:
         content = " ".join(sentencelst)
     articleDict[title] = (content, url)
 
-with open("bbc#1117.txt", "w") as file:
+with open("bbc#1118.txt", "w") as file:
     for key, value in articleDict.items():
         file.write(key + ". " + value[0] + "\n")
 
-with open("bbc#1117urls.text", "w") as urlFile:
+with open("bbc#1118urls.text", "w") as urlFile:
     for key, value in articleDict.items():
         urlFile.write(key + ". " + value[1] + "\n")
