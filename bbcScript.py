@@ -34,17 +34,18 @@ for url in urlDoc:
     if container is None:
         continue
     title = container.find(id = "main-heading").text.strip()
-    contentContainer = container.find_all("div", {"class": "ssrcss-18snukc-RichTextContainer e5tfeyi1"})
+    contentContainer = container.find_all("div", {"class": "ssrcss-uf6wea-RichTextComponentWrapper e1xue1i85"})
     sentencelst = []
     for sentence in contentContainer:
         sentencelst.append(sentence.text.strip())
         content = " ".join(sentencelst)
     articleDict[title] = (content, url)
 
-with open("bbc#1123.txt", "w") as file:
+
+with open("bbc#1126.txt", "w") as file:
     for key, value in articleDict.items():
         file.write(key + ". " + value[0] + "\n")
 
-with open("bbc#1123urls.text", "w") as urlFile:
+with open("bbc#1126urls.text", "w") as urlFile:
     for key, value in articleDict.items():
         urlFile.write(key + ". " + value[1] + "\n")
