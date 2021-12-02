@@ -42,10 +42,10 @@ for url in urlDoc:
     articleDict[title] = (content, url)
 
 
-with open("bbc#1129.txt", "w") as file:
+with open("bbc#1201.txt", "w") as file:
     for key, value in articleDict.items():
         file.write(key + ". " + value[0] + "\n")
 
-with open("bbc#1129urls.text", "w") as urlFile:
+with open("bbc#1201urls.text", "w") as urlFile:
     for key, value in articleDict.items():
         urlFile.write(key + ". " + value[1] + "\n")
