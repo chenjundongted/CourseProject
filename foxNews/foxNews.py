@@ -50,10 +50,10 @@ for url in urlDoc:
     text = " ".join(sentencelst)
     articleDict[title] = (text, url)
 
-with open("fox#1202.txt", "w") as file:
+with open("fox#1203.txt", "w") as file:
     for key, value in articleDict.items():
         file.write(key + ". " + value[0] + "\n")
 
-with open("fox#1202urls.text", "w") as urlFile:
+with open("fox#1203urls.text", "w") as urlFile:
     for key, value in articleDict.items():
         urlFile.write(key + ". " + value[1] + "\n")
