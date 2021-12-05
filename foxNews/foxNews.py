@@ -39,7 +39,10 @@ for url in urlDoc:
     if hdl_container is None:
         continue
     headline = hdl_container.find("h1").text.strip()
-    sub_headline = hdl_container.find("h2").text.strip()
+    if hdl_container.find("h2") is None:
+        sub_headline = ""
+    else:
+        sub_headline = hdl_container.find("h2").text.strip()
     title = headline + ": " + sub_headline
     content_container = sp.find("div", {"class": "article-body"})
     content = content_container.find_all("p")
@@ -50,10 +53,10 @@ for url in urlDoc:
     text = " ".join(sentencelst)
     articleDict[title] = (text, url)
 
-with open("fox#1203.txt", "w") as file:
+with open("fox#1204.txt", "w") as file:
     for key, value in articleDict.items():
         file.write(key + ". " + value[0] + "\n")
 
-with open("fox#1203urls.text", "w") as urlFile:
+with open("fox#1204urls.text", "w") as urlFile:
     for key, value in articleDict.items():
         urlFile.write(key + ". " + value[1] + "\n")
