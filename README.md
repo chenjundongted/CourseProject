@@ -1,9 +1,13 @@
 # CS 410 Final Project
 ## Overview
-We are working on creating a dataset containing news from CNN, BBC, FOX, NBC, VOX, and Atlantic. Our code scrapes URLs, headlines and contents of the news from these media websites. Each article is then manually annotated with the topics. The articles in this dataset were mainly published in November and December 2021. The final aggregated dataset is stored as `./Annotation/dataset.zip` where the single scraping news article was stored in the folder naming by its website separately.
+We are working on creating a dataset containing news from CNN, BBC, FOX, NBC, VOX, and Atlantic. Our code scrapes URLs, headlines and contents of the news from these media websites. Each article is then manually annotated with the topics. The articles in this dataset were mainly published in November and December 2021. The final aggregated dataset is stored as `./Annotation/dataset.zip` where the single scraping news article was stored in `./WebScrapers/` naming by its website separately.
 ## Implementation
-All the scraper programms are in `./WebScrapers`
-### CNN, NBC, VOX, the Atlantic
+All the scraper programms are in `./WebScrapers/`
+### BBC, FOX, CNN, NBC, VOX, and Atlantic
+`bbcScript.py` in `./WebScrapers/bbcNews` : scrapes news from https://www.bbc.com/news/
+
+`foxNews.py` in `./WebScrapers/foxNews` : scrapes news from https://www.foxnews.com/
+
 `cnn.ipynb` in `./WebScrapers/cnn` : scrapes news from https://www.cnn.com/
 
 `nbc.ipynb` in `./WebScrapers/nbc` : scrapes news from https://www.nbcnews.com/
@@ -22,13 +26,13 @@ All the scraper programms are in `./WebScrapers`
 
 `write_content` : generates a `.txt` file containing all the news headlines and contents
 #### Documentation Format for bbcScript.py & bbcNews
-There will be two files generated in a day for the news in "https://www.bbc.com/news".
+There will be two files generated in a day for the news in each website.
 The naming format will therefore be "[NEWS SITE]#[MONTH][DAY].txt" and "[NEWS SITE]#[MONTH][DAY]urls.txt".
-For example, two files generated in 11/15 should be "bbc#1115.txt" and "bbc#1115urls.txt" according to the naming format.
+For example, two files generated in 11/15 from bbcNews should be "bbc#1115.txt" and "bbc#1115urls.txt" according to the naming format.
 
 Format of "bbc#1115.txt":
 Each news article will be put into one single line in txt file.
-The starting sentence of the line is the headline of the news, while the rest of the sentences are those in main article.
+The starting sentence of the line is the headline of the news, while the rest of the sentences are the content in main article.
 
 Format of "bbc#1115urls.txt":
 Each news article will be put into one single line in txt file.
@@ -41,7 +45,7 @@ Our dataset is in `./Annotation/dataset.zip`. After unzipping it, there will be 
 
 `headline-content.txt`: Each line starts with a title of news followed by its content, separated by a period.
 
-`topic annotation.txt`: Each line contains the labeled topic of the corresponding news.
+`topic annotation.txt`: Each line contains the labeled topic of the corresponding news. Each label is seperated by a comma.
 ## Usage of Code
 ### Install
 To run the code, the following python modules are needed: bs4, re, selenium, urllib
@@ -49,7 +53,7 @@ To run the code, the following python modules are needed: bs4, re, selenium, url
 -   Clone the GitHub:
 
 `git clone git@github.com:chenjundongted/CourseProject.git`
-#### CNN, NBC, VOX, the Atlantic
+#### CNN, NBC, VOX, and Atlantic
 1.  Run jupyter notebook
 
 `jupyter notebook`
@@ -57,3 +61,7 @@ To run the code, the following python modules are needed: bs4, re, selenium, url
 2.  Open the corresponding notebook according to the news platform you want to crawl
 3. Modify the output file name `news_urls_file = ''` in `write_url` and `news_contents_file = ''` in `write_content`
 4.  Run the notebook
+
+#### BBC and FOX
+1. open the terminal and navigate to the folder containing the script
+2. run `python bbcScript.py` or `python foxNews.py`
