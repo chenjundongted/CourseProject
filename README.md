@@ -48,7 +48,7 @@ Our dataset is in `./Annotation/dataset.zip`. After unzipping it, there will be 
 `topic annotation.txt`: Each line contains the labeled topic of the corresponding news. Each label is seperated by a comma.
 ## Usage of Code
 ### Install
-To run the code, the following python modules are needed: bs4, re, selenium, urllib, beautifulsoup
+To run the code, the following python modules are needed: bs4, re, selenium, urllib
 ### To run the scraper
 -   Clone the GitHub:
 
