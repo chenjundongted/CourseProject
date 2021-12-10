@@ -25,7 +25,7 @@ All the scraper programms are in `./WebScrapers/`
 `write_url` : generates a `.txt` file containing all the news headlines and URLs
 
 `write_content` : generates a `.txt` file containing all the news headlines and contents
-#### Documentation Format for bbcScript.py & bbcNews
+#### Scraping News Format Example
 There will be two files generated in a day for the news in each website.
 The naming format will therefore be "[NEWS SITE]#[MONTH][DAY].txt" and "[NEWS SITE]#[MONTH][DAY]urls.txt".
 For example, two files generated in 11/15 from bbcNews should be "bbc#1115.txt" and "bbc#1115urls.txt" according to the naming format.
@@ -48,7 +48,7 @@ Our dataset is in `./Annotation/dataset.zip`. After unzipping it, there will be 
 `topic annotation.txt`: Each line contains the labeled topic of the corresponding news. Each label is seperated by a comma.
 ## Usage of Code
 ### Install
-To run the code, the following python modules are needed: bs4, re, selenium, urllib
+To run the code, the following python modules are needed: bs4, re, selenium, urllib, beautifulsoup
 ### To run the scraper
 -   Clone the GitHub:
 
