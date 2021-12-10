@@ -1,6 +1,6 @@
 # CS 410 Final Project
 ## Overview
-We are working on creating a dataset containing news from CNN, BBC, FOX, NBC, VOX, and Atlantic. Our code scrapes URLs, headlines and contents of the news from these media websites. Each article is then manually annotated with the topics. The articles in this dataset were mainly published in November and December 2021. The final aggregated dataset is stored as `./Annotation/dataset.zip` where the single scraping news article was stored in `./WebScrapers/` naming by its website separately.
+We are working on creating a dataset containing news from CNN, BBC, FOX, NBC, VOX, and Atlantic. Our code scrapes URLs, headlines, and contents of the news from these media websites. Each article is then manually annotated with the topics. The articles in this dataset were mainly published in November and December 2021. The final aggregated dataset is stored as `./Annotation/dataset.zip` where the single scraping news article was stored in `./WebScrapers/` naming by its website separately.
 ## Implementation
 All the scraper programms are in `./WebScrapers/`
 ### BBC, FOX, CNN, NBC, VOX, and Atlantic
