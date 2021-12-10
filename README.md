@@ -65,3 +65,8 @@ To run the code, the following python modules are needed: bs4, re, selenium, url
 #### BBC and FOX
 1. open the terminal and navigate to the folder containing the script
 2. run `python bbcScript.py` or `python foxNews.py`
+
+## Project Contribution:
+Ted Chen: 1. Maintain a unique format for all files and organize the file structure for easy access. 2. Scraping data from bbcNews and foxNews. 3. Proposal and Progress report. 4. Annotation. 5. Documentation. 6. Final project presentation.
+
+Yaoyi Gao: 1. Scraping data from cnn, nbc, atlantic, and vox. 2. Proposal and Progress report. 3. Annotation. 4. Documentation.
