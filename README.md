@@ -18,7 +18,7 @@ All the scraper programms are in `./WebScrapers/`
 
 `get_js_soup` : uses webdriver object to execute javascript code and get dynamically loaded web content
 
-`scrape_dir_page` : scrapes all news urls from the given media link. The function executes `get_js_soup(dir_url,driver)` to load HTML content and uses `.find` `.find_all` to get the information we need. For example, in NBC.ipynb, we use `soup.find_all('li',class_='alacarte__item')` to get list of all <li> of class 'alacarte__item' and `link_holder.find('a')['href']` to get each URL. To avoid getting video news pages, I filtered out the ones starting with 'https://www.nbcnews.com/video/'.
+`scrape_dir_page` : scrapes all news urls from the given media link. The function executes `get_js_soup(dir_url,driver)` to load HTML content and uses `.find` `.find_all` to get the information we need. For example, in NBC.ipynb, we use `soup.find_all('li',class_='alacarte__item')` to get list of all `<li>` of class 'alacarte__item' and `link_holder.find('a')['href']` to get each URL. To avoid getting video news pages, I filtered out the ones starting with 'https://www.nbcnews.com/video/'.
 
 `scrape_news` : gets news headline and content from the given URL. In NBC.ipynb, we use `soup.select("h1")[0].text` to get the title and `soup.find_all(class_="article-body__content")` to get the content.
 
