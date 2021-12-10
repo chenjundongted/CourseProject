@@ -11,7 +11,7 @@ with open("topic annotation.txt", "r") as annotation_file:
     annotation = annotation_file.readlines()
 
 # Information about the nth news article
-n = 10
+n = 20
 print(f"There are {len(annotation)} news articles in the dataset.\n")
 # single url
 url = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', h_u[n])
@@ -22,6 +22,7 @@ print(f"{h_u[n].partition('.')[0]} \n")
 print(f"{h_c[n]}\n")
 # labels
 print(annotation[n])
+
 
 # Count the occurence of word in an article
 def word_count(str):
